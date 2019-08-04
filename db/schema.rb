@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 2019_08_04_084335) do
     t.string "name", null: false
     t.text "description", null: false
     t.integer "price", null: false
-    t.string "seller", null: false
+    t.string "seller", default: "1", null: false
     t.string "email", null: false
     t.text "image_url", null: false
     t.datetime "created_at", null: false
