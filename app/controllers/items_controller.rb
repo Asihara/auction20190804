@@ -2,6 +2,11 @@ class ItemsController < ApplicationController
 
   def show
     @item = Item.find(params[:id])
+    @category = Category.find(1)
+    @category.items.each do |item|
+      puts item.name
+    end
+
   end
 
   def index
@@ -37,7 +42,7 @@ class ItemsController < ApplicationController
 private
 
   def item_params
-    params.require(:item).permit(:name, :price, :seller, :description, :email, :image_url)
+    params.require(:item).permit(:name, :price, :seller, :description, :email, :image_url , :category_id )
   end
 
 end

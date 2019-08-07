@@ -6,6 +6,10 @@
     商品名：<br>
     <%= form.text_field :name %>
   </p>
+  <P>
+    カテゴリ:<br>
+    <%= form.collection_select :category_id, Category.all , :id, :name , include_blank: "カテゴリーを選択して下さい" %>
+  </P>
   <p>
     商品詳細：<br>
     <%= form.text_area :description %>
